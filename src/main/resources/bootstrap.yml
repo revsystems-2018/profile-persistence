@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: profile-persistence
+  cloud:
+    config:
+      uri: http://localhost:8888
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    healthcheck:
+      enabled: true
+
+persistence:
+  name: security-service
+  authorization:
+    type: basicAuth
+    headers:
+      Authorization: setforms:WEhYMlJSdnNmN05Ib0l3ZUE2OGNtZjRYU0tlTXJKUkFYcjBXT0lGazVIUXpaRGlZVURub1Q3VFAzTkhPNk5HdlVMMFlnTDI3dFpGR2NyZmhoOGFPL1hlT1BGT3NUU1pvVkR0WE9ZRDhNMmFsNDM3Wmd0KzM0aW5DcERlMDNnU1ZnQ0lFZUhrSXM4dlJSdXpOOXhlczN0enFQeGo3LzhteVIvQjVkN25JVjA1TkpDbjQrRFFFajQvWFQxWmp1Z0hlN0I2WmRFWWRGRjJZYWR2c1ZjdCthZzhpRzRYeUZqcDhtSDEzZWZmbHAxVHcyNlJNSFJLa1dSTjIzUFdLbFJDWHIvUmR1b3QvY2ZQOVpyMVI1bmNtR0ZSdHZYQkNiMXZIZFJhLzB2MVdBeFBGNVM2WVgwSTNqTDJCRHQxUWhGVENHVEZsdVpDcnFzTGZnQm5wdllzYmxnPT0=
+      X-TENANT-ID: dhin
+  api:
+    findById:
+      url: http://10.9.1.202:8080/security-service/users/
+  data:
+    user:
+      id: userId
+      firstName: firstName
+      lastName: lastName
+      email: email
+
+userProfile:
+  service:
+    name: default-user-profile
+    # set in the SET-Fusion environment
+    url: http://10.9.1.202:8080/user-profile-service
