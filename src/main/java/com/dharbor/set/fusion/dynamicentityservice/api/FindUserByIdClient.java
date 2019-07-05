@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
- * @author Max.Jimenez
+ * @author rveizaga
  */
 @FeignClient(
         name = ApiConstants.SecurityService.NAME_KEY,

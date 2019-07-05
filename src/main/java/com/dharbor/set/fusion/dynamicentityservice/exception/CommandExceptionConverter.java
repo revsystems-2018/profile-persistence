@@ -34,6 +34,9 @@ public class CommandExceptionConverter implements ExceptionConverter {
         if (HttpStatus.FORBIDDEN.value() == status) {
             return (T) new EntityNotFoundException();
         }
+        if (HttpStatus.CONFLICT.value() == status) {
+            return (T) new EntityNotFoundException();
+        }
 
         throw new UnsupportedOperationException("Unhandled value:"
                 + " status " + status

@@ -1,5 +1,8 @@
 package com.dharbor.set.fusion.dynamicentityservice.domain;
 
+/**
+ * @author rveizaga
+ */
 public class DMSDocument {
 
     private String dmsId;

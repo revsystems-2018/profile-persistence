@@ -23,7 +23,7 @@ persistence:
       X-TENANT-ID: dhin
   api:
     findById:
-      url: http://10.9.1.202:8080/security-service/users/
+      url: http://10.9.1.166:8080/security-service/users/
   data:
     user:
       id: userId

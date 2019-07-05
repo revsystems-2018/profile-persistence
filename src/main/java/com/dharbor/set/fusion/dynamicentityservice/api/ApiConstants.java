@@ -26,7 +26,6 @@ public final class ApiConstants {
         }
 
         public static final String NAME_KEY = "${persistence.name}";
-        public static final String URL_KEY = "${persistence.api.login.url}";
         public static final String URL_USER_BY_ID = "${persistence.api.findById.url}";
     }
 }
